@@ -22,7 +22,7 @@ export default function Footer() {
         {/* Main Heading */}
         <div className="mb-8">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            INDIA'S FIRST
+            INDIA&apos;S FIRST
           </h2>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-pink-400 italic">QUICK</span>
@@ -85,7 +85,7 @@ export default function Footer() {
       </div>
 
      <div className="hidden md:block h-[60%]">
-  <img src="/ss.svg" className="md:h-[400px] h-[120px] opacity-25" />
+  <img src="/ss.svg" className="md:h-[400px] h-[120px] opacity-25" alt="Background decoration" />
 </div>
 
     </footer>

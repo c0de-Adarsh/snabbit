@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Navbar from '../components/navbar'
 import StarDecoration from '../components/StarDecoration'
 import PhoneMockup from '../components/PhoneMockup'
@@ -86,7 +87,7 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
-              <span className="text-gray-800">INDIA'S FIRST</span>
+              <span className="text-gray-800">INDIA&apos;S FIRST</span>
               <br />
               <span className="text-pink-500 italic">QUICK</span>
               <span className="text-gray-800"> SERVICE APP</span>
@@ -124,7 +125,14 @@ export default function Home() {
               <div className="hidden md:flex flex-wrap justify-center items-end gap-8">
                 {/* Service People Illustrations */}
                 <div className="w-[390px] h-[400px] relative z-20">
-                  <img src="/cleaner1.svg" alt="cleaner" className="w-full h-[650px] object-contain" />
+                  <Image 
+                    src="/cleaner1.svg" 
+                    alt="Professional cleaner service illustration" 
+                    width={390} 
+                    height={650}
+                    className="w-full h-[650px] object-contain"
+                    priority
+                  />
                 </div>
                 
                 {/* Empty space for floating phone */}
@@ -133,14 +141,28 @@ export default function Home() {
                 </div>
                 
                 <div className="w-[390px] h-[400px] relative z-20">
-                  <img src="/cleaner2.svg" alt="cleaner" className="w-full h-[550px] object-contain" />
+                  <Image 
+                    src="/cleaner2.svg" 
+                    alt="Professional cleaner service illustration" 
+                    width={390} 
+                    height={550}
+                    className="w-full h-[550px] object-contain"
+                    priority
+                  />
                 </div>
               </div>
               
               {/* Mobile Layout - Show only cleaner1 */}
               <div className="md:hidden flex justify-center items-end">
                 <div className="w-[280px] h-[350px] relative z-20">
-                  <img src="/cleaner1.svg" alt="cleaner" className="w-full h-[500px] object-contain" />
+                  <Image 
+                    src="/cleaner1.svg" 
+                    alt="Professional cleaner service illustration" 
+                    width={280} 
+                    height={500}
+                    className="w-full h-[500px] object-contain"
+                    priority
+                  />
                 </div>
               </div>
             </div>

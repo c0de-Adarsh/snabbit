@@ -6,6 +6,8 @@ export default function SnabbitHomepage() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = sectionRef.current; // Store current ref value
+    
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -22,13 +24,13 @@ export default function SnabbitHomepage() {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [isAnimated]);
@@ -54,7 +56,7 @@ export default function SnabbitHomepage() {
               <div className="relative mb-6 h-40">
                 <img
                   src="/c1.png"
-                  alt="Decor"
+                  alt="Background Verified Experts"
                   className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                 />
               </div>
@@ -77,7 +79,7 @@ export default function SnabbitHomepage() {
               <div className="relative mb-6 h-40">
                 <img
                   src="/c2.svg"
-                  alt="Decorative SVG"
+                  alt="Professionally Trained"
                   className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                 />
               </div>
@@ -100,7 +102,7 @@ export default function SnabbitHomepage() {
               <div className="relative mb-6 h-40">
                 <img
                   src="/c3.svg"
-                  alt="Decorative SVG"
+                  alt="Freedom to Cancel"
                   className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                 />
               </div>
@@ -134,7 +136,7 @@ export default function SnabbitHomepage() {
               <div className="relative mb-6 h-40">
                 <img
                   src="/c4.png"
-                  alt="Decorative SVG"
+                  alt="Strong Women Workforce"
                   className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                 />
               </div>
@@ -157,7 +159,7 @@ export default function SnabbitHomepage() {
               <div className="relative mb-6 h-40">
                 <img
                   src="/c4.svg"
-                  alt="Decorative SVG"
+                  alt="Quality Service"
                   className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                 />
               </div>
@@ -180,7 +182,7 @@ export default function SnabbitHomepage() {
               <div className="relative mb-6 h-40">
                 <img
                   src="/c6.svg"
-                  alt="Decorative SVG"
+                  alt="Trusted by Families"
                   className="absolute inset-0 w-full h-full object-contain pointer-events-none"
                 />
               </div>
